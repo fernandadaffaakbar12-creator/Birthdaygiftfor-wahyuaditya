@@ -13,7 +13,7 @@
 
 <body>
     <audio id="bg-music" loop>
-        <source src="audio/Kita Lewati Berdua Overnight Lirik.mp3" type="audio/mpeg">
+        <source src="audio/Westlife - Swear It Again (Lyrics).mp3" type="audio/mpeg">
     </audio>
 
     <div id="music-popup" class="music-popup">
@@ -21,9 +21,9 @@
         <img src="img/2.jpeg" alt="Album Cover" class="album-cover">
         <div class="music-info">
             <div class="song-title-wrapper">
-                <p class="song-title">Kita Lewati Berdua</p>
+                <p class="song-title">Swear It Again</p>
             </div>
-            <p class="artist-name">Overnight</p>
+            <p class="artist-name">Westlife</p>
         </div>
         <button id="play-pause-btn" class="play-pause-btn" onclick="toggleMusic()">
             <!-- SVG Pause Icon -->
@@ -111,10 +111,10 @@
                     </g>
                 </svg>
 
-                <!-- Track sparkle particles -->
+
                 <div class="track-sparkles"></div>
 
-                <!-- Pemain - Tongkang Kayu dengan Bouquet -->
+
                 <div id="player-obj">
                     <span class="player-glow"></span>
                     <div class="cart-body">
@@ -177,13 +177,11 @@
             <h1 class="aesthetic-font fade-in-text">Happy Birthday,<br>My Favorite Person</h1>
             <p class="aesthetic-font fade-in-text"
                 style="font-size: 1.3rem; color: #c71585; margin-top: 10px; margin-bottom: 10px; letter-spacing: 2px;">-
-                Salsabila Ramadhani -</p>
+                Wahyu Aditya -</p>
             <img src="img/foto-pacar.png" alt="Foto Pacar" class="birthday-photo fade-in-text">
-            <p class="typing-text">Hari ini jadi salah satu hari yang spesial, karena di hari ini kamu lahir dan tumbuh
-                jadi seseorang yang luar biasa.</p>
-            <p class="typing-text">Selamat bertambah usia yaa. Semoga di umur yang baru ini, banyak hal baik yang datang
-                ke hidup kamu, dan semoga kamu selalu punya alasan untuk bahagia. Tetap jadi kamu yang hangat dan
-                menyenangkan seperti yang selama ini aku kenal.</p>
+            <p class="typing-text">Happy for u sayangg, aku harap hidupmu selalu berwarna, bahagia, dan ceriaaaa🩷</p>
+            <p class="typing-text">Semoga hari-hari mu selalu diberikan hal hal yang baik, dan semoga kamu selalu punya
+                alasan untuk bahagia. Tetap jadi kamu yang hangat dan menyenangkan seperti yang aku kenal</p>
 
             <div class="pulsating-heart">🤍</div>
 
@@ -214,19 +212,21 @@
             <div class="solar-system">
                 <div class="orbit-track">
 
-                    <div class="planet-card item1" data-caption="Dimsum">
+                    <div class="planet-card item1" data-caption="Payung Teduh">
                         <img src="img/favorite-food.jpg" alt="Food">
-                        <p class="planet-caption">Your favorite food</p>
+                        <p class="planet-caption">Your favorite band</p>
                     </div>
 
-                    <div class="planet-card item2" data-caption="Frisenflag Strawberry">
-                        <img src="img/favorite-drink.jpg" alt="Drink">
-                        <p class="planet-caption">Your favorite drink</p>
+                    <div class="planet-card item2"
+                        data-embed="https://open.spotify.com/embed/track/7snQQk1zcKl8gZ92AnueZW?utm_source=generator&si=d996bbc39e4d4a69"
+                        data-caption="Sweet Child O'Mine - Guns N'Roses">
+                        <img src="img/favorite-song.jpg" alt="Song">
+                        <p class="planet-caption">Your favorite song</p>
                     </div>
 
-                    <div class="planet-card item3" data-caption="Marestu Rafli Ramadhan">
+                    <div class="planet-card item3" data-caption="Diva Ariestya">
                         <img src="img/favorite-person.jpg" alt="Person">
-                        <p class="planet-caption">Your favorite friend/person</p>
+                        <p class="planet-caption">Your favorite person</p>
                     </div>
 
                 </div>
@@ -259,6 +259,14 @@
                     <img src="img/4.jpeg" alt="Kenangan 4">
                     <canvas class="scratch-canvas"></canvas>
                 </div>
+                <div class="scratch-card">
+                    <img src="img/5.jpeg" alt="Kenangan 5">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+                <div class="scratch-card">
+                    <img src="img/6.jpeg" alt="Kenangan 6">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
             </div>
             <p id="gallery-hint" class="gallery-hint">✨ Gosok semua fotonya dulu yaa! ✨</p>
             <div id="gallery-slider" class="gallery-slider">
@@ -274,7 +282,7 @@
                     </p>
                 </div>
 
-                <div class="video-cards-grid">
+                <div class="video-cards-grid single-video">
                     <!-- Video Card 1 -->
                     <div class="video-card-item">
                         <div class="video-frame-container">
@@ -305,41 +313,9 @@
                                 </button>
                             </div>
                         </div>
-
-                        <!-- Video Card 2 -->
-                        <div class="video-card-item">
-                            <div class="video-frame-container">
-                                <video id="video-memories-2" class="memory-video" playsinline controls
-                                    preload="metadata">
-                                    <source src="video/2.mp4" type="video/mp4">
-                                    Browser kamu tidak mendukung pemutar video.
-                                </video>
-
-                                <!-- Overlay jika dalam mode portrait di HP -->
-                                <div class="rotate-lock-overlay" id="rotate-overlay-2">
-                                    <div class="rotate-phone-icon">
-                                        <svg viewBox="0 0 64 64" fill="none" class="phone-svg">
-                                            <rect x="20" y="8" width="24" height="48" rx="4" stroke="#ff69b4"
-                                                stroke-width="2.5" fill="rgba(255, 105, 180, 0.15)" />
-                                            <circle cx="32" cy="50" r="2" fill="#ff69b4" />
-                                            <line x1="26" y1="12" x2="38" y2="12" stroke="#ff69b4" stroke-width="2"
-                                                stroke-linecap="round" />
-                                            <path d="M 48,22 C 54,28 54,36 48,42" stroke="#ff1493" stroke-width="2.5"
-                                                stroke-linecap="round" fill="none" />
-                                            <polygon points="46,40 50,45 52,38" fill="#ff1493" />
-                                        </svg>
-                                    </div>
-                                    <p class="rotate-hint-title">Putar Handphone Kamu</p>
-                                    <p class="rotate-hint-desc">Ubah ke posisi horizontal (landscape) untuk memutar
-                                        video
-                                        ini yaa</p>
-                                    <button class="btn-rotate-play" onclick="handleRotateAndPlay(2)">
-                                        <span class="btn-icon">📺</span> Putar Layar Penuh
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
+            </div>
         </section>
 
         <!-- Slide Polaroid -->
@@ -362,7 +338,7 @@
                     </div>
                     <div class="polaroid" data-caption="beautiful girl">
                         <img src="img/beautiful girl.jpeg" alt="beautiful girl">
-                        <p class="caption">beautiful girl</p>
+                        <p class="caption">handsome boy</p>
                     </div>
                     <div class="polaroid" data-caption="in my mine">
                         <img src="img/in my mine.jpeg" alt="in my mine">
@@ -377,41 +353,22 @@
             <h1 class="aesthetic-font">You Are My Universe</h1>
 
             <p class="typing-text" style="margin-top: 25px; margin-bottom: 15px;">
-                Di hari spesial kamu ini, aku cuma mau bilang, semoga kamu selalu ingat kalau kamu itu berharga dan
-                pantas mendapatkan banyak hal baik. Kalau dipikir-pikir, lucu juga ya, kita pernah saling kenal sejak
-                zaman SMA, lalu sempat berpisah dan akhirnya dipertemukan lagi. Setelah itu, kita malah harus berpisah
-                kembali selama kurang lebih 8 bulan. Selama waktu itu, mungkin kita sama-sama menjalani kehidupan dan
-                punya cerita masing-masing, sampai akhirnya bisa saling kenal dan hadir lagi dalam cerita satu sama lain
-                seperti sekarang.
+                Aku harap di tahun ini dan tahun berikutnya kamu selalu sehat, bahagia, dan dikelilingi cinta yang
+                tulus. Semoga semua doa baikmu pelan-pelan jadi kenyataan, dan setiap langkahmu membawa kamu semakin
+                dekat dengan mimpimu. Semoga aku masih di kasi kesempatan buat nemenin kamu, di kondisi apapun itu.
             </p>
 
             <p class="typing-text" style="margin-top: 25px; margin-bottom: 15px;">
-                Makasih ya udah jadi bagian dari hari-hari aku selama ini. Dari awal yang mungkin cuma ngobrol biasa,
-                terus jadi sering cerita, bercanda, atau bahas hal-hal random yang kadang nggak jelas. Aku seneng aja
-                bisa kenal kamu sampai sejauh ini. Nggak semua momen harus jadi sesuatu yang besar, kadang ngobrol
-                sebentar atau dengerin cerita kamu aja udah cukup bikin hari terasa beda. Semoga nanti kita masih sering
-                ngobrol, masih bisa saling cerita, dan tetap nyaman satu sama lain seperti sekarang.
-
-                Pokoknya, semoga kamu selalu baik-baik aja. Dan kalau suatu saat nanti banyak hal berubah, semoga kita
-                tetap jadi dua orang yang masih bisa saling nyapa dan cerita seperti biasa.
+                Maaf akhir-akhir ini aku masalahin semua hal, marah-marah terus, dan kurang excited buat kamu. Maaf yaaa
+                sayangg🩷 tapii makasii udah mau sabar sama akuu terus, dann makasi udah selalu adaa buat akuu🫶🏻
+                Bahagia teruss yaa sayangg
             </p>
-
-            <p class="typing-text" style="margin-bottom: 40px;">
-                Di hari spesial kamu ini, aku cuma mau bilang, semoga kamu selalu tahu kalau kamu itu berharga dan layak
-                dapetin banyak hal baik. Tetap jadi diri kamu sendiri, yang kadang nyebelin, kadang random, tapi tetap
-                jadi kamu yang aku kenal selama ini. Semoga di umur yang baru ini semuanya berjalan lebih baik buat
-                kamu, dan kalau nanti ada hari yang terasa berat, semoga selalu ada orang-orang yang bisa bikin kamu
-                ngerasa nggak sendirian.</p>
-
-            <p class="typing-text" style="margin-bottom: 40px;">
-                Selamat bertambah usia yaa. Semoga kamu selalu punya alasan buat senyum, dan semoga aku masih bisa jadi
-                salah satu orang yang ikut lihat kamu tumbuh jadi versi kamu yang lebih baik.🤍</p>
 
             <hr style="border: 0; border-top: 1px solid rgba(255, 105, 180, 0.3); margin-bottom: 20px;">
             <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 5px;">Dari orang yang paling bersyukur mengenalmu,
             </p>
-            <p class="sender-name aesthetic-font baby-pink-text" style="font-size: 2rem; margin-top: 5px;">Marestu Rafli
-                Ramadhan</p>
+            <p class="sender-name aesthetic-font baby-pink-text" style="font-size: 2rem; margin-top: 5px;">Diva Ariestya
+            </p>
 
             <!-- Tombol Tiup Lilin -->
             <button id="btn-tiup-lilin" class="btn-tiup-lilin" onclick="bukaHalamanLilin()">🎂 Tiup Lilin</button>
@@ -438,7 +395,7 @@
                                 <div class="flame-inner"></div>
                             </div>
                             <div class="candle-number-body">
-                                <span class="candle-digit">2</span>
+                                <span class="candle-digit">1</span>
                             </div>
                         </div>
                         <!-- Angka 4 -->
@@ -447,7 +404,7 @@
                                 <div class="flame-inner"></div>
                             </div>
                             <div class="candle-number-body">
-                                <span class="candle-digit">0</span>
+                                <span class="candle-digit">5</span>
                             </div>
                         </div>
                     </div>

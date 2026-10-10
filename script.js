@@ -245,7 +245,7 @@
         const pinPopupClose = document.getElementById('pin-popup-close');
 
         // DEFAULT PIN: Silakan ubah angka ini jika ingin PIN lain
-        const SECRET_PIN = "2704";
+        const SECRET_PIN = "1606";
 
         let pinAttempt = 0;
         let popupTimeout = null;
@@ -509,6 +509,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     const customCaption = this.getAttribute('data-caption');
                     const teksCaption = customCaption ? customCaption : this.querySelector('.planet-caption').innerText;
                     if (modalCaption) modalCaption.innerText = teksCaption;
+
+                    // Pause lagu latar agar suara lagu tidak bertumpuk dengan Spotify
+                    const bgMusic = document.getElementById('bg-music');
+                    if (bgMusic && !bgMusic.paused) {
+                        bgMusic.pause();
+                        modal.setAttribute('data-paused-bgmusic', 'true');
+                        const iconPlay = document.getElementById('icon-play');
+                        const iconPause = document.getElementById('icon-pause');
+                        if (iconPlay && iconPause) {
+                            iconPlay.style.display = 'block';
+                            iconPause.style.display = 'none';
+                        }
+                    }
                 }
                 // B. JIKA YANG DIKLIK ADALAH KARTU 3D BIASA (Bukan Lagu)
                 else if (this.classList.contains('planet-card')) {
@@ -580,6 +593,21 @@ function tutupModal() {
             modalImg.style.maxWidth = "";
             modalImg.style.maxHeight = "";
         }
+
+        // Lanjutkan kembali musik latar jika sebelumnya dijeda oleh pemutar lagu/video
+        if (modal.getAttribute('data-paused-bgmusic') === 'true') {
+            modal.removeAttribute('data-paused-bgmusic');
+            const bgMusic = document.getElementById('bg-music');
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(() => {});
+                const iconPlay = document.getElementById('icon-play');
+                const iconPause = document.getElementById('icon-pause');
+                if (iconPlay && iconPause) {
+                    iconPlay.style.display = 'none';
+                    iconPause.style.display = 'block';
+                }
+            }
+        }
     }
 }
 
@@ -640,7 +668,7 @@ function handleRotateAndPlay(videoId) {
 
     // Masuk fullscreen dan coba kunci orientasi horizontal
     if (video.requestFullscreen) {
-        video.requestFullscreen().catch(() => {});
+        video.requestFullscreen().catch(() => { });
     } else if (video.webkitRequestFullscreen) {
         video.webkitRequestFullscreen();
     } else if (video.webkitEnterFullscreen) {
@@ -649,10 +677,10 @@ function handleRotateAndPlay(videoId) {
     }
 
     if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
+        screen.orientation.lock('landscape').catch(() => { });
     }
 
-    video.play().catch(() => {});
+    video.play().catch(() => { });
 }
 
 // ==========================================
